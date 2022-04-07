@@ -1,0 +1,23 @@
+function fourthBit(number) {
+    // Write your code here
+    let numDecimal = number;
+    let residuo = 0;
+    let resultado = 1;
+    let arregloResiduo = new Array();
+    let i = 0;
+    do{
+        resultado = numDecimal/2;
+        residuo = numDecimal % 2;
+        arregloResiduo[i] = residuo;
+        i++;
+        console.log(resultado);
+        console.log(residuo);
+        numDecimal = resultado;
+    }while(numDecimal >= 1)
+    console.log(arregloResiduo);
+    let arrayReversed = arregloResiduo.reverse();
+    console.log(arrayReversed);
+    console.log(arrayReversed[arrayReversed.length-1]);
+    return arrayReversed[arrayReversed.length-1]
+}
+fourthBit(32);
